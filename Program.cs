@@ -9,7 +9,16 @@ using Microsoft.AspNetCore.Components.Web;
    Information: Mensajes informativos sobre el funcionamiento normal de la aplicación. 
    Warning: Advertencias sobre situaciones que podrian llevar a problemas en el futuro.
    Error: Errores no críticos que no impiden el funcionamiento normal de la aplicación.
- * Critical: Errores críticos que pueden provocar la interrupción de la aplicación. 
+   Critical: Errores críticos que pueden provocar la interrupción de la aplicación. 
+ 
+ * Configuraciones
+   *appsettings.json
+   *appsettings.<envivorment>.json
+   *App secrets (secrets.json) - Solo en modo desarrollo (Development) ruta: %APPDATA%\Microsoft\UserSecrets
+   *Variables de entorno (Environment Variables)
+   *Linea de comandos
+   *Azure Key Vault
+
  */
 
 var builder = WebApplication.CreateBuilder(args);

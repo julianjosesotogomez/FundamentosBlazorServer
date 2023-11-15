@@ -9,11 +9,14 @@ namespace FundamentosBlazorServer.Data
 
         private readonly IDatosDemo _datosDemo;
         private readonly ILogger<WeatherForecastService> _logger;
+        // Como acceder a un valor de la configuración
+        private readonly IConfiguration _config;
 
-        public WeatherForecastService(IDatosDemo datosDemo, ILogger<WeatherForecastService> logger)
+        public WeatherForecastService(IDatosDemo datosDemo, ILogger<WeatherForecastService> logger, IConfiguration config)
         {
             _datosDemo = datosDemo;
             _logger = logger;
+            _config = config;
         }
 
         public Task<WeatherForecast[]> GetForecastAsync(DateOnly startDate)
