@@ -1,0 +1,31 @@
+﻿@page "/counter"
+@page "/counter/{valorInicial:int}"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    [Parameter]
+    public int valorInicial { get; set; }
+
+    private int currentCount = 0;
+
+    protected override void OnParametersSet() // Sobrescribe parametros que vienen desde la URL 
+    {
+        base.OnParametersSet();
+        currentCount = valorInicial;
+    }
+
+
+    private void IncrementCount()
+    {
+        //Es un error generado 
+        // throw new Exception("Romper Codigo");
+        currentCount++;
+    }
+}

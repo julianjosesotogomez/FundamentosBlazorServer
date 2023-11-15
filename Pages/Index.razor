@@ -1,0 +1,19 @@
+﻿@page "/"
+@using FundamentosBlazorServer.Data
+@inject IDatosDemo _datosDemo
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<div class="row">
+    <div class="col-md-12">
+        <img src="/images/Captura de pantalla 2023-05-17 072115.png"/>
+    </div>
+</div>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<p>El numero aleatoreo es : @_datosDemo.GetEdad()</p>
