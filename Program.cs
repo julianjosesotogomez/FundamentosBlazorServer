@@ -2,6 +2,16 @@ using FundamentosBlazorServer.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
+
+/*
+ * Trace: Información detallada y especifica, util para depuración intensiva. 
+   Debug: Información de depuración que puede ser útil durante el desarrollo. 
+   Information: Mensajes informativos sobre el funcionamiento normal de la aplicación. 
+   Warning: Advertencias sobre situaciones que podrian llevar a problemas en el futuro.
+   Error: Errores no críticos que no impiden el funcionamiento normal de la aplicación.
+ * Critical: Errores críticos que pueden provocar la interrupción de la aplicación. 
+ */
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

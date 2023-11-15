@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using FundamentosBlazorServer.Data
 @inject IDatosDemo _datosDemo
+@inject ILogger<Index> _logger
 
 <PageTitle>Index</PageTitle>
 
@@ -17,3 +18,13 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 <p>El numero aleatoreo es : @_datosDemo.GetEdad()</p>
+
+@code{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        int id = 32;
+        _logger.LogInformation("Abriendo Pagina Principal para id #{idUsuario}", id);
+    }
+}
