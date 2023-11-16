@@ -1,6 +1,31 @@
 ﻿@page "/Demos/DemoOne"
 <h3>DemoOne</h3>
 
-@code {
+<p>@web</p>
 
+<p>
+    @a + @b
+</p>
+
+<p>
+    @(a + b)
+</p>
+
+@@web 
+
+@* Para multiples lineas usar la sintaxis *@
+<br/>
+@{
+    var c = a * b;
+}
+@c
+
+@* @html.Raw("<h1>Ejemplo de titulo</h1>") *@
+@((MarkupString)"<h1>Ejemplo de titulo</h1>")
+
+@code {
+    private string web = "Julian José Soto Gómez";
+
+    private int a = 5;
+    private int b = 8;
 }
